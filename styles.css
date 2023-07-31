@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca:wght@400;700&display=swap");
+
+/*
+The designs were created to the following widths:
+- Mobile: 375px
+- Desktop: 1440px
+*/
+
+:root {
+  --sedans-background-color: hsl(31, 77%, 52%);
+  --suvs-background-color: hsl(184, 100%, 22%);
+  --luxury-background-color: hsl(179, 100%, 13%);
+  --font-color: hsla(0, 0%, 100%, 0.75);
+  --background-headings-buttons: hsl(0, 0%, 95%);
+}
+
+/* - Mobile: 375px */
+/* used mobile first approach */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px solid #000000; */
+}
+body {
+  background-color: var(--background-headings-buttons);
+  display: flex;
+}
+main {
+  justify-content: center;
+  align-items: center;
+}
+.sedans,
+.suvs,
+.luxury {
+  display: flex;
+  flex-direction: column;
+  padding: 3.5rem;
+}
+.sedans {
+  background-color: var(--sedans-background-color);
+  border-radius: 1rem 1rem 0 0;
+}
+.suvs {
+  background-color: var(--suvs-background-color);
+}
+.luxury {
+  background-color: var(--luxury-background-color);
+  border-radius: 0 0 1rem 1rem;
+}
+.icon {
+  width: 30%;
+}
+h1 {
+  font-family: "Big Shoulders Display";
+  font-size: 3rem;
+  font-weight: 700;
+  padding: 2rem 0;
+  color: var(--background-headings-buttons);
+}
+p {
+  font-family: "Lexend Deca";
+  font-size: 1.05rem;
+  font-weight: 400;
+  line-height: 1.75rem;
+  color: var(--font-color);
+}
+button {
+  background-color: var(--background-headings-buttons);
+  padding: 1rem 1.5rem;
+  border-radius: 2rem;
+  border: none;
+  font-family: "Lexend Deca";
+  font-size: 1.05rem;
+  font-weight: 400;
+  width: 60%;
+  margin-top: 1rem;
+}
+.sedans button {
+  color: var(--sedans-background-color);
+}
+.suvs button {
+  color: var(--suvs-background-color);
+}
+.luxury button {
+  color: var(--luxury-background-color);
+}
+.attribution {
+  padding: 0.25rem 0;
+}
+.attribution p {
+  color: #111111;
+  font-size: 0.75rem;
+}
+.attribution a {
+  text-decoration: none;
+}
+
+/* - Desktop: 1440px */
+@media (min-width: 1440px) {
+  main {
+    width: 100%;
+    padding: 15rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .sedans {
+    border-radius: 0.5rem 0 0 0.5rem;
+  }
+  .luxury {
+    border-radius: 0 0.5rem 0.5rem 0;
+  }
+  h1 {
+    font-size: 2.25rem;
+    padding: 1.5rem 0;
+  }
+  p {
+    font-size: 0.9rem;
+    color: var(--font-color);
+  }
+  button {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.85rem;
+    width: 65%;
+    margin-top: 5rem;
+  }
+  .attribution {
+    grid-column: 1/4;
+  }
+}
+
+/* end */
